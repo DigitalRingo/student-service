@@ -3,11 +3,10 @@ spring:
     name: rest
   datasource:
     hikari:
-      jdbc-url: jdbc:postgresql://localhost:5432/home_crud
-      username: home_crud
-      password: home_crud
+      username: service
+      password: service
       driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/home_crud
+    url: jdbc:postgresql://localhost:5432/service
   jpa:
     database: postgresql
     show-sql: true
@@ -15,11 +14,11 @@ spring:
       hibernate:
         format_sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     open-in-view: false
   docker:
     compose:
-      enabled: false
+      enabled: true
 springdoc:
   api-docs:
     enabled: true
